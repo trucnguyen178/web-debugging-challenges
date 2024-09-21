@@ -21,8 +21,8 @@ function randomArray(arr) {
     return Math.floor(Math.random() * arr.length)
   }
   var newArr = []
-  while (arr.length >= 0) {
-    newArr.push(arr.slice(randomNumber(), 1)[0])
+  while (arr.length > 0) {
+    newArr.push(arr.splice(randomNumber(), 1));
   }
   return newArr
 }
@@ -55,7 +55,7 @@ var puppy = {
 }
 
 let { name } = copyPuppy(puppy);
-name;
+console.log(name);
 
 let name1 = puppy.name;
-name1;
+console.log(name1);
